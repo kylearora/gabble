@@ -13,10 +13,8 @@ const requireAuth = function(req, res, next) {
 }
 
 router.get("/",  requireAuth, function(req, res) {
-    // console.log("Connected");
-    models.posts.findAll()
+    models.posts.findAll({ limit: 30, order: [['createdAt', 'DESC']] })
     .then(function(posts){
-      // console.log(posts);
       res.render("index", {
         testmessage : "Succesfully rendered posts",
         posts:posts

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/home.css">
     <title>Gabble</title>
   </head>
   <body>
@@ -9,18 +10,26 @@
     <div class="">
       <a href="/">Gabble</a>
       <a href="/newGab">Create a new Gab</a>
-      <a href="#">Logged in as LALLALA</a>
+      <a href="#">Logged in as LALALA</a>
       <a href="/logout">Log Out</a>
     </div>
 
-    <h2>{{testmessage}}</h2>
-
-    <h1>Testing</h1>
+    <h1>Gabble</h1>
 
     <div class="posts">
       {{#posts}}
-        {{title}}
-        {{body}}
+      <div class="postsDiv">
+        <div class="title">
+          {{title}}
+        </div>
+        <div class="body">
+          {{body}}
+        </div>
+        <div class="gabEdit">
+          <a href="/like">Like</a>
+          <a href="/delete/{{id}}">Delete Gab</a>
+        </div>
+      </div>
       {{/posts}}
     </div>
 
