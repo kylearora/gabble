@@ -13,7 +13,7 @@ var sess = {
   secret: "keyboard cat",
   cookie: {},
   saveUninitialized: true,
-  resave: true
+  resave: true,
 }
 app.use(session(sess))
 
