@@ -22,17 +22,13 @@ a {
 }
 
 h1  {
-  color: white;
+  color:white;
 }
 
-h3  {
-  font-size: 20px;
-  padding-left: 10px;
-}
-
-h4 {
+label {
+  display: flex;
+  justify-content: center;
   color: white;
-  padding-left: 10px;
 }
 
 .headerLinks {
@@ -41,67 +37,47 @@ h4 {
   justify-content: space-between;
 }
 
-.postsDiv {
-  width: 600px;
-  border: 2px solid white;
-  margin-top: 20px;
-  border-radius: 5px;
+.newGabForm {
+
+  margin-top: 80px;
 }
 
-.title {
-  display: flex;
-  align-items: center;
-  width: 600px;
-  height: 40px;
-  font-size: 20px;
-  background-color: #2E393D;
-  color: #3AEB7A;
+.newGabTitleInputDiv {
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
-.body {
-  display: flex;
-  align-items: center;
-  width: 600px;
-  height: 50px;
-  background-color: #8B6F9E
-}
-
-#bodyText {
-  padding-left: 10px;
-}
-
-.gabEdit {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 5px;
-}
-
-#likeButton {
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #50C7EB;
-  width: 100px;
-  height: 30px;
+#newGabTitleInput {
+  width: 497px;
+  height: 25px;
   border-radius: 10px;
 }
 
-#likeButton:hover {
-  color: blue;
+.newGabTextAreaDiv {
+  margin-top: 5px;
 }
 
-#deleteButton {
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #50C7EB;
-  width: 100px;
-  height: 30px;
+#newGabTextArea {
   border-radius: 10px;
 }
 
-#deleteButton:hover {
-  color: red;
+.submitButtonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+#submitButton {
+  font-family: futura;
+  font-size: 18px;
+  background-color: #50C7EB;
+  color: white;
+  margin-top: 8px;
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+#submitButton:hover {
+  color: white;
+  background-color: #3AEB7A;
 }

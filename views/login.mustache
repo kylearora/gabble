@@ -2,40 +2,72 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Login Page</title>
   </head>
   <body>
 
     <div class="">
       <a href="/">Gabble</a>
-      <a href="/newGab">Create a new Gab</a>
-      <a href="#">Logged in as LALLALA</a>
-      <a href="/logout">Log Out</a>
     </div>
 
     <h1>Please login below to start GABBING</h1>
 
-    <form class="" action="/login" method="post">
+    <form class="loginForm" action="/login" method="post">
 
-      <label for="">Username:</label>
-      <div class="">
-        <input type="text" name="username" value="">
+      <label for="">Username</label>
+      <div class="usernameDiv">
+        <input id="usernameInput"type="text" name="username" value="">
       </div>
 
-      <label for="">Password:</label>
-      <div class="">
-        <input type="password" name="password" value="">
+      <label for="">Password</label>
+      <div class="passwordDiv">
+        <input id="passwordInput" type="password" name="password" value="">
       </div>
 
-      <div class="">
-        <button type="submit" name="button">Submit</button>
+      <div class="buttonDiv">
+        <button id="submitButton" type="submit" name="button">Submit</button>
       </div>
 
     </form>
 
-    <div class="">
+    <div class="registerLink">
       <a href="/register">Create a New User</a>
     </div>
 
   </body>
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/welcome.css">
+    <title>Welcome Page</title>
+  </head>
+  <body>
+    <h1>Welcome, Bruhs</h1>
+    <h2>{{message}}</h2>
+    <form class="loginForm" action="/login" method="post">
+      <label for="">Username</label>
+      <div class="usernameDiv">
+        <input id="usernameInput"type="text" name="username" value="">
+      </div>
+
+      <label for="">Password</label>
+      <div class="passwordDiv">
+        <input id="passwordInput" type="password" name="password" value="">
+      </div>
+
+      <div class="buttonDiv">
+        <button id="submitButton" type="submit" name="button">Submit</button>
+      </div>
+    </form>
+
+    <div class="registerLink">
+      <a href="/register">Register New User</a>
+    </div>
+
+  </body>
+</html> -->

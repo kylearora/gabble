@@ -6,31 +6,48 @@
     <title>Gabble</title>
   </head>
   <body>
+    <h1>Gabble</h1>
 
-    <div class="">
+    <div class="headerLinks">
       <a href="/">Gabble</a>
       <a href="/newGab">Create a new Gab</a>
-      <a href="#">Logged in as LALALA</a>
+      {{#user}}
+      <a href="/">Logged in as {{username}}</a>
+      {{/user}}
       <a href="/logout">Log Out</a>
     </div>
 
-    <h1>Gabble</h1>
+
+    {{errorMessage}}
 
     <div class="posts">
       {{#posts}}
+
       <div class="postsDiv">
+
         <div class="title">
-          {{title}}
+        <h3>{{title}}</h3>
         </div>
+
         <div class="body">
-          {{body}}
+        <h4 id="bodyText">{{body}}</h4>
         </div>
+
+        <div class="">
+          <h4>Liked By:</h4>
+          {{#likes}}
+            <h4>{{userId}}</h4>
+          {{/likes}}
+        </div>
+
         <div class="gabEdit">
-          <a href="/like">Like</a>
-          <a href="/delete/{{id}}">Delete Gab</a>
+          <a id="likeButton" href="/like/{{id}}">Like</a>
+          <a id="deleteButton" href="/delete/{{id}}">Delete</a>
         </div>
+
       </div>
       {{/posts}}
+
     </div>
 
   </body>

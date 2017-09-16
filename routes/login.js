@@ -15,13 +15,20 @@ const requireAuth = function(req, res, next) {
 router.get("/",  requireAuth, function(req, res) {
     models.posts.findAll({ limit: 30, order: [['createdAt', 'DESC']] })
     .then(function(posts){
-      res.render("index", {
-        testmessage : "Succesfully rendered posts",
-        posts:posts
+      models.likes.findAll()
+      .then(function(likes){
+        models.users.findOne()
+        .then(function(user){
+          res.render("index", {
+            testmessage : "Succesfully rendered posts",
+            posts:posts,
+            likes:likes,
+            user: req.session.user
+          })
+        })
       })
     })
   })
-
 
 router.get("/login", function (req, res){
   res.render("login")
@@ -36,7 +43,7 @@ router.post("/login", function (req, res){
       where: {
             username: username
             }
-  })
+    })
     .then(function(user){
       if(!user) {
         res.render("login", {

@@ -3,9 +3,13 @@ const router = express.Router()
 const models = require("../models")
 
 router.get("/newGab", function(req, res){
-  res.render("newGab")
+  models.users.findOne()
+  .then(function(user){
+    res.render("newGab", {
+      user : req.session.user
+    })
+  })
 })
-
 
 router.post("/newGab", function(req, res){
   console.log(res);
@@ -26,7 +30,6 @@ router.post("/newGab", function(req, res){
     })
   })
 })
-
 
 
 module.exports = router
