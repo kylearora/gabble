@@ -8,18 +8,24 @@ router.get("/logout", function (req, res){
 })
 
 router.get("/delete/:id", function(req, res){
-  models.posts.destroy({
+  models.likes.destroy({
     where: {
-      id : req.params.id
+      postId : req.params.id
+    }
+  })
+  .then(function(){
+    models.posts.destroy({
+      where: {
+        id : req.params.id
       }
     })
+  })
     .then(function(){
       res.redirect("/")
   })
 })
 
 router.get("/like/:id", function(req, res){
-  console.log(res);
   const newLike = models.likes.build({
     userId : req.session.user.id,
     postId : req.params.id

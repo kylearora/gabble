@@ -4,13 +4,11 @@ module.exports = function(sequelize, DataTypes) {
     likeId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
     postId: DataTypes.INTEGER
+  }, {})
 
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
-  });
+    // likes.associate = function (models) {
+    //   likes.belongsTo(models.users,{as: 'likedUser', foreignKey: 'userId'})
+    // }
+
   return likes;
 };

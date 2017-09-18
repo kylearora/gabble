@@ -18,6 +18,7 @@ body {
 
 a {
   color: white;
+  text-decoration: none;
 }
 
 h1 {
@@ -83,8 +84,4 @@ label {
 
 .registerLink {
   margin-top: 25px;
-}
-
-a {
-  text-decoration: none;
 }

@@ -3,13 +3,16 @@ module.exports = function(sequelize, DataTypes) {
   var posts = sequelize.define('posts', {
     title: DataTypes.STRING,
     body: DataTypes.STRING,
-    userId: DataTypes.INTEGER
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
+    userId: DataTypes.INTEGER,
+  }, {})
+
+      posts.associate = function(models) {
+        posts.hasMany(models.likes,{as: 'likes', foreignKey: 'postId'})
     }
-  });
+
+      // posts.associate = function(models) {
+      //   posts.belongsToMany(models.users, {through: 'likedUsers', foreignKey: 'userId'})
+      // }
+
   return posts;
 };

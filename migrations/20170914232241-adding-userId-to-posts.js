@@ -13,8 +13,7 @@ module.exports = {
           model: "users",
           key: "id"
         }
-       }
-     )
+      })
   },
 
   down: function (queryInterface, Sequelize) {
