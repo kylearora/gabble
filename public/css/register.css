@@ -1,0 +1,80 @@
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: futura;
+  margin-top: 50px;
+  background:
+  linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+}
+
+h1  {
+  color: white;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 15px;
+}
+
+#usernameInput {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px
+}
+
+.usernameDiv {
+  margin-top: 5px;
+}
+
+
+#passwordInput {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px
+}
+
+.passwordDiv {
+  margin-top: 5px;
+}
+
+#displayNameInput {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px
+}
+
+.displayNameDiv {
+  margin-top: 5px;
+}
+
+.submitButtonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+#submitButton {
+  font-family: futura;
+  font-size: 18px;
+  background-color: #50C7EB;
+  color: white;
+  margin-top: 20px;
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+#submitButton:hover {
+  color: white;
+  background-color: #3AEB7A;
+}

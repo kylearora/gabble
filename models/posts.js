@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     }
 
       // posts.associate = function(models) {
-      //   posts.belongsToMany(models.users, {through: 'likedUsers', foreignKey: 'userId'})
+      //   posts.belongsTo(models.users, {through: 'likedUsers', foreignKey: 'userId'})
       // }
 
   return posts;
