@@ -7,11 +7,11 @@ module.exports = function(sequelize, DataTypes) {
   }, {})
 
     likes.associate = function (models) {
-      likes.belongsTo(models.users,{as: 'likedUser', foreignKey: 'userId'})
+      likes.belongsTo(models.users,{through: 'user', foreignKey: 'userId'})
     }
 
     likes.associate = function (models) {
-      likes.belongsTo(models.posts, {as: 'postLikes', foreignKey: 'postId'})
+      likes.belongsTo(models.posts, {as: 'post', foreignKey: 'postId'})
     }
 
   return likes;

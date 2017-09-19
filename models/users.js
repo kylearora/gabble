@@ -4,12 +4,10 @@ module.exports = function(sequelize, DataTypes) {
     username: DataTypes.STRING,
     password: DataTypes.STRING,
     displayName: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        
-      }
-    }
-  });
+  }, {})
+
+    // users.associate = function (models) {
+    //   users.hasMany(models.posts, {as: 'users', foreignKey: 'userId'})
+    // }
   return users;
 };

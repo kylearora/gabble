@@ -21,13 +21,14 @@ router.get("/",  requireAuth, function(req, res) {
         },
         // {
         //   model: models.users,
-        //   through: 'likedUsers'
+        //   through: 'user'
         // }
       ],
       limit: 30,
       order: [['createdAt', 'DESC']]
      })
     .then(function(posts){
+    console.log(posts[0].likes[0])
         models.users.findOne()
         .then(function(user){
           res.render("index", {
